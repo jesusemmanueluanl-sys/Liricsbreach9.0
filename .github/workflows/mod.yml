@@ -13,6 +13,4 @@ jobs:
         with: { gradle-version: 9.5.1 }
       - run: gradle -p lyricsbridge/fabric-mod build --no-daemon
       - uses: actions/upload-artifact@v4
-        with:
-          name: lyricsbridge-mod
-          path: |
+        with: { name: lyricsbridge-mod, path: "lyricsbridge/fabric-mod/build/libs/lyricsbridge-*[0-9].jar" }
